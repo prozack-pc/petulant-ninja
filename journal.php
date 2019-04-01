@@ -120,7 +120,7 @@
 					
 					}
 					$sql = "INSERT INTO eve_journalcache".$_GET['id']." (amount,balance,date,context,stamp,description,first_party_id,id,reason,ref_type,second_party_id) VALUES (".$x['amount'].",".$x['balance'].",'".$x['date']."','".json_encode(array($x['context_id'],$x['context_id_type']))."',".strtotime($x['date']).",'".str_replace("'","&#39;",rtrim($x['description']))."',".$x['first_party_id'].",".$x['id'].",'".str_replace("'","&#39;",$x['reason'])."','".$x['ref_type']."',".$x['second_party_id'].")";
-					print $sql."<br>";
+					#print $sql."<br>";
 					if(!($result = $db->sql_query($sql))){	die('db_insert:  journalcache error!!');}
 				}
 			}

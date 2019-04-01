@@ -24,5 +24,5 @@
 		if(!($result = $db->sql_query($sql))){	die('insert failed.');}
 		
 	}
-	header('Location: http://localhost/index.php');
+	print '<a href="http://localhost/index.php">click here to return</a>';
 ?>

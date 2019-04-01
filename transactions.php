@@ -123,6 +123,8 @@
 					}
 				}
 				$stamp = strtotime($x['date']);
+				if($x['is_buy']){$x['is_buy']=1;}else{$x['is_buy']=0;}
+				if($x['is_personal']){$x['is_personal']=1;}else{$x['is_personal']=0;}
 				
 				$sql = "SELECT * FROM eve_xactioncache".$_GET['id']." WHERE transaction_id = ".$x['transaction_id'];
 				if(!($result = $db->sql_query($sql))){	die('db_report:  xactioncache error!!');}
